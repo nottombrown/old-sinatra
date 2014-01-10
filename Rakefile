@@ -37,6 +37,12 @@ Rake::TestTask.new(:test) do |t|
   t.ruby_opts << '-I.'
 end
 
+Rake::TestTask.new(:"test:routing") do |t|
+  t.test_files = ["test/routing_test.rb"]
+  t.ruby_opts = ["-rubygems"] if defined? Gem
+  t.ruby_opts << "-I."
+end
+
 # Rcov ================================================================
 
 namespace :test do
@@ -67,7 +73,7 @@ task :add_template, [:name] do |t, args|
         puts "Liquid not found in #{file}"
       else
         puts "Adding section to #{file}"
-        template = template.gsub(/Liquid/, args.name.capitalize).gsub(/liquid/, args.name.downcase)        
+        template = template.gsub(/Liquid/, args.name.capitalize).gsub(/liquid/, args.name.downcase)
         code.gsub! /^(\s*===.*CoffeeScript)/, "\n" << template << "\n\\1"
         File.open(file, "w") { |f| f << code }
       end

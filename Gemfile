@@ -1,5 +1,5 @@
 # Why use bundler?
-# Well, not all development dependencies install on all rubies. Moreover, `gem 
+# Well, not all development dependencies install on all rubies. Moreover, `gem
 # install sinatra --development` doesn't work, as it will also try to install
 # development dependencies of our dependencies, and those are not conflict free.
 # So, here we are, `bundle install`.
@@ -8,7 +8,7 @@
 
 RUBY_ENGINE = 'ruby' unless defined? RUBY_ENGINE
 
-source :rubygems unless ENV['QUICK']
+source 'https://rubygems.org' unless ENV['QUICK']
 gemspec
 
 gem 'rake'
