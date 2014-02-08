@@ -1,4 +1,4 @@
-Buggy old library
+Buggy Old Sinatra Gem
 ========================
 
 *Prep time: ~5 minutes*
