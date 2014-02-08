@@ -11,3 +11,5 @@ cd old-sinatra
 bundle
 bundle exec rake test:routing
 ```
+
+When you come in for your interview, we'll give you a bug report with a failing spec and work together to fix it.
