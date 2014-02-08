@@ -1,3 +1,8 @@
+Buggy old library
+========================
+
+*Prep time: ~5 minutes*
+
 This is a creaky old fork of Sinatra that we'll use for an exercise during your interview. Since it's so old, make sure that the dependencies install correctly and that the tests are green on your system
 
 ```bash
