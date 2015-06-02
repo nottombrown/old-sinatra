@@ -13,6 +13,7 @@ gemspec
 
 gem 'rake'
 gem 'rack-test', '>= 0.5.6'
+gem 'test-unit'
 
 gem 'haml', '>= 3.0', :group => 'haml'
 gem 'builder', :group => 'builder'
